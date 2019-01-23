@@ -1,0 +1,21 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #808080;
+    font-family: 'Lato', sans-serif;
+}
+h5{
+    margin: 0;
+}
+h6{
+    font-size: 15px;
+    color: #b7b7b7;
+}
+
+::-webkit-scrollbar{
+    color: #000;
+}
+::-webkit-scrollbar-track{
+    color: #000;
+}
