@@ -88,9 +88,15 @@ li{
     overflow-y: scroll;
     margin-bottom: 50px;
 }
+
+/*.technologies, .interests{
+    text-align: center;
+}*/
+
 .about{
     width: 30%;
 }
 .front h4{
     transform: rotate(90deg);
     width: 150px;
+}
