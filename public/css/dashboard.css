@@ -1,0 +1,54 @@
+h2{
+    text-align: center;
+}
+
+#createProject{
+    border: 1px solid #808080;
+    border-radius: 5px;      
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input{
+    color: #fff;
+    background-color: #1f1f1f;
+    height: 20px;
+    margin-top: 10px;
+    border: none;
+    margin: 10px 5px;
+}
+
+input::placeholder{
+    color:rgba(255,255,255,0.55);
+    text-align: center;
+}
+
+#selectImg{
+    color: #fff;
+    background-color: #1f1f1f;
+    height: 20px;
+    margin-top: 10px;
+    border: none;
+    margin: 10px 5px;
+    width: 150px;
+}
+
+.sticky-left{
+    border: 1px solid #fff;
+    width: 10%;
+    height: 90vh;
+    position: fixed;
+}
+
+.sticky-left div{
+    border: 1px solid #fff; 
+}
+.main{
+    position: relative;
+    left:10%;
+    height: 1000px;
+    width: 90%;
+    border:1px solid yellow;
+    box-sizing: border-box;
+}

@@ -30,7 +30,7 @@
         <div class='main-wrapper'>
             <div class='photography'><img src="./public/images/cesare.jpeg" alt="me,myself and I"></div>
             <div class='name_absolute'>
-                <h5>Junior Full-Stack Developer</h5>
+                <h5>Full-Stack Web Developer</h5>
                 <h2>Amir Bonvin</h2>
             </div>
             <div class='aboutme'>

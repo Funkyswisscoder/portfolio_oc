@@ -13,13 +13,13 @@
         else if($_GET['redirect'] == 'contact'){
             require('view/contactform.php');
         }
-    }if(isset($_POST['redirect']) AND htmlspecialchars($_POST['redirect'])){
-        if($_POST['redirect'] == 'createProject'){
+    }else if(isset($_GET['redirectCreate']) AND htmlspecialchars($_GET['redirectCreate'])){
+        if($_GET['redirectCreate'] == 'createProject'){
             $action = 'create';
             $projectTitle = $_POST['projectTitle'];
             $partnerName = $_POST['partnerName'];
             $framework = $_POST['framework'];
-            $projectImg = $_POST['projectImg'];
+            $img_link = $_POST['img_link'];
             $tech1 = $_POST['tech1'];
             $tech2 = $_POST['tech2'];
             $tech3 = $_POST['tech3'];
