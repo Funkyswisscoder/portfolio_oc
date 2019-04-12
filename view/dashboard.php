@@ -1,3 +1,9 @@
+<?php     
+    
+    ini_set('display_errors', 1); 
+    require('../model/projectMdl.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,28 +27,18 @@
         if(!isset($_GET['action']))
             return;
         if($_GET['action'] == "1"){
+            $FORM_ACTION = './index.php?redirectCreate=createProject';
             include('../view/dashForm.php');
         }else if ($_GET['action'] == "2"){
-            if(isset($_POST['edit'])){
-                include('../view/dashForm.php');
-            } else {
-                ?>
-                <div>
-            <form action="dashboard.php?action=2" method="post">
-            <select name="edit">
-                <option value="1">caca</option>
-                <option value="2">pipi</option>
-            </select>
-            <input type="submit">
-            </form>
-        </div>
-        <?php
-            }
-            
-            
-            
+                include('../view/dashUpdateForm.php');
+        }else if ($_GET['action'] == "3"){
+            require('../view/dashDeleteForm.php');
+        }
+        else {
+            echo 'CACA';
         }
     ?>
+
     </section>
 </body>
 </html>

@@ -30,13 +30,24 @@
             return $req;
         }
 
-       /* public function updateOneProject(){
-             
-        }*/
+       public function updateOneProject($id, $projectTitle, $partnerName, $framework, $tech1, $tech2, $tech3, $img_link){
+            $db = $this->dbConnect();
+            $req = $db->prepare('UPDATE achievements SET project_name = :project_name, partners_name = :partners_name, framework = :framework, tech_1 = :tech_1, tech_2 = :tech_2, tech_3 = :tech_3, img_link = :img_link WHERE id = :id' );
+            $req->execute(array(
+                'project_name'      => $projectTitle,
+                'partners_name'     => $partnerName,
+                'framework'         => $framework,
+                'tech_1'            => $tech1,
+                'tech_2'            => $tech2,
+                'tech_3'            => $tech3,
+                'img_link'          => $img_link,
+                'id'                => $id
+            ));
+        }
 
         public function deleteOneProject($id){
             $db = $this->dbConnect();
-            $req = $db->prepare('DELETE FROM Posts WHERE id=?');
+            $req = $db->prepare('DELETE FROM achievements WHERE id=?');
             $req->execute(array($id));
         }
 

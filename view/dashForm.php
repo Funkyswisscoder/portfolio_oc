@@ -1,18 +1,23 @@
 <?php 
 
 ini_set('display_errors', 1);
-require('../model/projectMdl.php');
 
     if(isset($_REQUEST['edit'])){
-        $redirection = 
         $pm = new ProjectManager();
         $project = $pm->getOneProject($_REQUEST['edit'])->fetchAll()[0];
     }
+    if(!isset($FORM_ACTION)){
+        echo '<b style="color:red">SETTING $FORM_ACTION IS REQUIRED FOR THE DASHFORM TO WORK YO!</b>';
+        return;
+    }
     
 ?>
-<form action="./index.php?redirectCreate=createProject" method="post" id='createProject'>
+<form action="<?php echo $FORM_ACTION ?>" method="post" id='createProject'>
 
     <div>
+        <?php if(isset($_REQUEST['edit'])){ ?>
+            <input type="text" name="id" value="<?php echo $_REQUEST['edit']; ?>" style="display:none">
+        <?php }?>
         <input type="text" name="projectTitle" placeholder="Nom du Projet" required value=<?php echo isset($project) ? $project['project_name'] : ''; ?>>
         <input type="text" name="partnerName" placeholder="Nom du Client" required value=<?php echo isset($project) ? $project['partners_name'] : ''; ?>>
         <input type="text" name="framework" placeholder="Framework utilisé" required value=<?php echo isset($project) ? $project['framework'] : ''; ?>>
@@ -28,7 +33,9 @@ require('../model/projectMdl.php');
         <label for="projectImg">Screen du projet:</label><br/>
         <select name="img_link" form="createProject" id="selectImg">
         <?php
-            $arrimg = scandir('/portfolio_oc/public/images');
+            $arrimg = scandir('../public/images');
+            
+            
             $arrimg = array_slice($arrimg,2,count($arrimg)-2); //remove . and ..
             foreach($arrimg as $img){
                 echo '<option value="../public/images/'.$img.'">'.explode('.',$img)[0].'</option>';

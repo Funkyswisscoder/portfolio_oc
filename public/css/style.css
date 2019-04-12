@@ -24,9 +24,3 @@ h6{
     width: 100px;
 }
 
-::-webkit-scrollbar{
-    color: #000;
-}
-::-webkit-scrollbar-track{
-    color: #000;
-}
