@@ -28,7 +28,7 @@
         if($pseudo == 'Amir'){
             if(password_verify($userPwd,$datas['pwd'])){
                 $_SESSION['connexion'] = true;
-                require('../controller/projectCtrl.php'); 
+                require('../view/dashboard.php'); 
             }else{
                 echo "<h1> Wrong Username or Password</h1>";
             }

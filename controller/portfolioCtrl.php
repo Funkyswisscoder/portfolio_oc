@@ -1,6 +1,7 @@
 <?php
-    require('./model/projectMdl.php');
     ini_set('display_errors', 1);
+    require('./model/projectMdl.php');
+
 
     $getAllPortfolio = new ProjectManager();
 

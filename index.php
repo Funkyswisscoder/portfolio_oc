@@ -5,7 +5,7 @@
 
     if(isset($_GET['redirect']) AND htmlspecialchars($_GET['redirect'])){
         if($_GET['redirect'] == 'home'){
-            require('view/landingpageCtrl.php');
+            require('./controller/landingpageCtrl.php');
         }
         else if($_GET['redirect'] == 'portfolio'){
             require('controller/portfolioCtrl.php');

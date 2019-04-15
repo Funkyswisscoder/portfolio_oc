@@ -1,6 +1,7 @@
 <?php
-    require('../model/projectMdl.php');
     ini_set('display_errors', 1);
+    require('./model/projectMdl.php');
+
 
     $projectManager = new ProjectManager();
 
@@ -10,10 +11,6 @@
     }else if($action == 'update'){
         $updateProject = $projectManager->updateOneProject($id, $projectTitle, $partnerName, $framework, $tech1, $tech2, $tech3, $img_link);
         header('location:./view/dashboard.php');
-    }else if(isset($_SESSION['connexion']) AND htmlspecialchars($_SESSION['connexion'])){
-        if($_SESSION['connexion'] == true){
-        header('location:../view/dashboard.php');            
-        }
     }else{
         require('../view/landingpage.php');
     }
