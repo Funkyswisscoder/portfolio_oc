@@ -81,6 +81,39 @@
     width: 40vw;
     height: 40vh;
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 15%;
+    right: 10%;
+}
+
+
+.portTitle{
+    font-size: 40px;
+    margin-left: 15%;
+    margin-top: 15%;
+    width: 225px;
+}
+
+.portInfo{
+    display: block;
+}
+
+.client{
+    margin-top: 25px;
+    width: 400px;
+    margin-left: 15%;
+}
+
+.client h4{
+    font-size: 25px;
+    margin-top: 20%;
+}
+
+.portTech{
+    width: 350px;
+    margin-left: 15%;
+}
+
+.portTech h4{
+    font-size: 25px;
+    margin-top: 20%;
 }

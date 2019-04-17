@@ -34,11 +34,9 @@
             <div class="portInfo">
                 <div class="portTech">
                     <h4>Technologies:</h4>
-                    <ul>
-                        <li><?= $tech1;?></li>
-                        <li><?= $tech2;?></li>
-                        <li><?= $tech3;?></li>
-                    </ul>
+                    <p>Structure/Animations:<?= $tech1;?></p>
+                    <p>Language Frontend:<?= $tech2;?></p>
+                    <p>Language Backend:<?= $tech3;?></p>
                 </div>
                 <div class="client">
                     <h4>Client:</h4>

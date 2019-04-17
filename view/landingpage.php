@@ -41,13 +41,15 @@
                     <p>CSS3</p>
                     <p>JavaScript</p>
                     <p>PHP</p>
-                <!--   <p>React/React-Native</p> -->
+                <!--    <p>Angular</p>
+                    <p>Dart/Flutter</p>
+                    <p>React/React-Native</p> -->
                 </div>
                 <div class='interests'>
                     <h6>Contact me for:</h6>
                     <p>Web Apps</p>
                     <p>Web Design</p>
-                <!--    <p>Mobile Apps</p> -->
+                <!--<p>Mobile Apps</p> -->
                 </div>
             </div>  
         </div>
