@@ -1,6 +1,8 @@
 <?php
 
     ini_set('display_errors', 1);
+        require('./model/projectMdl.php');
+    $pm = new ProjectManager();
 
 
     if(isset($_REQUEST['delete'])){
@@ -12,10 +14,14 @@
 ?>
 
 <div>
-    <form action="<?php echo $FORM_ACTION ?>" method="post" id="deleteSelection">
+    <form action="./index.php?redirectDelete=deleteProject" method="post" id="deleteSelection">
         <select name="delete" form="deleteSelection">
-            <option name="projet1" value="1">projet 1</option>
-            <option name="projet2" value="2">projet 2</option>
+        <?php      
+            $projects = $pm->getAllProjects()->fetchAll();
+            foreach($projects as $p){
+                echo '<option value="'.$p['id'].'">'.$p["project_name"].'</option>';
+            }
+            ?>
         </select>
         <input type="submit">
     </form>

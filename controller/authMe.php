@@ -1,9 +1,10 @@
 <?php
     ini_set('display_errors', 1);
-    require('../model/userMdl.php');
+    require('./model/userMdl.php');
+
 /*
 
-    first creation in DB of my account
+    first creation in DB of my personal account
 
     $pseudo = 'Amir';
     $password = '***********';
@@ -16,21 +17,23 @@
 
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $userPwd = htmlspecialchars($_POST['password']);
-
-
-    $_SESSION['pseudo'] = $pseudo;
-
+    if($pseudo != 'Amir'){
+        //display error page
+        echo "<h1> Wrong Username or Password</h1>";
+        return;
+    }
 
     $connectionManager = new userManager();
     $password_in_db_hashed = $connectionManager->checkUser($pseudo);
 
     while($datas = $password_in_db_hashed->fetch()){
-        if($pseudo == 'Amir'){
-            if(password_verify($userPwd,$datas['pwd'])){
+        if(password_verify($userPwd,$datas['pwd'])){
+                
+                $_SESSION['pseudo'] = $pseudo;
                 $_SESSION['connexion'] = true;
-                require('../view/dashboard.php'); 
-            }else{
-                echo "<h1> Wrong Username or Password</h1>";
-            }
+                require('./view/dashboard.php'); 
+        }else{
+            echo "<h1> Wrong Username or Password</h1>";
         }
     }
+

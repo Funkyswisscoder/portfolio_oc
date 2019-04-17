@@ -10,7 +10,10 @@
         require('./view/dashboard.php');
     }else if($action == 'update'){
         $updateProject = $projectManager->updateOneProject($id, $projectTitle, $partnerName, $framework, $tech1, $tech2, $tech3, $img_link);
-        header('location:./view/dashboard.php');
+        header('location:./?redirect=dashboard');
+    }else if($action == 'delete'){
+        $deleteProject = $projectManager->deleteOneProject($id);
+        header('location:./?redirect=dashboard');
     }else{
         require('../view/landingpage.php');
     }

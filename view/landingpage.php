@@ -10,32 +10,13 @@
     <title>Amir Bonvin</title>
 </head>
 <body>
-    <header>
-        <h4>Amir Bonvin</h4>
-        <img src="./public/images/logoSIT.png" alt="logo de la société Swiss-ITech" id='logoSIT'>
-        <nav>
-            <ul>
-                <li><a href="./index.php?redirect=home">Accueil</a></li>
-                <li><a href="./index.php?redirect=portfolio">Portfolio</a></li>
-                <li><a href="./index.php?redirect=partners">Partenaires</a></li>
-                <li><a href="./index.php?redirect=contact">Contact</a></li>
-                <li class='loginLink' id='loginLink'>Login</li>
-            </ul>
-        </nav>
-    </header>
+<?php include('./view/header.php'); ?>
     <section class='introduction'>
         <div class='networks'>
             <img src="./public/images/github-logo.png" alt="lien vers mon github">
             <img src="./public/images/linkedin-logo.png" alt="lien vers mon linkedin">
         </div>
         <div class='main-wrapper'>
-            <div class="form-wrapper" id="formWrapper" style="display:none">
-                <form action="./controller/authMe.php" method="POST">
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
-                    <input type="password" name="password" id="password" placeholder="Password">
-                    <input type="submit" value="Valider">
-                </form>
-            </div>
             <div class='photography'><img src="./public/images/moi_bw.jpg" alt="me,myself and I"></div>
             <div class='name_absolute'>
                 <h5>Full-Stack Web Developer</h5>
@@ -76,6 +57,6 @@
 
 
     </section>
-    <script src='./public/js/landingPage.js'></script>
+    <script src='./public/js/script.js'></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+.ComWrapper{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+    
+.reviewPost{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #808080;
+}

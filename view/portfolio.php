@@ -10,38 +10,55 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <?php 
-        while($data = $getPortfolio->fetch()){
 
-            $title = htmlspecialchars($data['project_name']);
-            $client = htmlspecialchars($data['partners_name']);
-            $framework = htmlspecialchars($data['framework']);
-            $tech1 = htmlspecialchars($data['tech_1']);
-            $tech2 = htmlspecialchars($data['tech_2']);
-            $tech3 = htmlspecialchars($data['tech_3']);
-            $imgLink = htmlspecialchars($data['img_link']);
-    ?>
     <section class="pageWrapper">
-        <div class="firstPart">
-            <img src="./portfolio_oc/<?= $imgLink;?>" alt="portfolio image" class="portImg">
-            <h2 class="portTitle"><?= $title;?></h2>
-        </div>
-        <div class="portInfo">
-            <div class="portTech">
-                <h4>Technologies:</h4>
-                <ul>
-                    <li><?= $tech1;?></li>
-                    <li><?= $tech2;?></li>
-                    <li><?= $tech3;?></li>
-                </ul>
+
+            <?php 
+                include('./view/header.php'); 
+
+                while($data = $getPortfolio->fetch()){
+
+                    $title = htmlspecialchars($data['project_name']);
+                    $client = htmlspecialchars($data['partners_name']);
+                    $framework = htmlspecialchars($data['framework']);
+                    $tech1 = htmlspecialchars($data['tech_1']);
+                    $tech2 = htmlspecialchars($data['tech_2']);
+                    $tech3 = htmlspecialchars($data['tech_3']);
+                    $imgLink = htmlspecialchars($data['img_link']);
+            ?>
+        <div class='mySlides fade'>
+            <div class="firstPart ">
+                <img src="./portfolio_oc/<?= $imgLink;?>" alt="portfolio image" class="portImg">
+                <h2 class="portTitle"><?= $title;?></h2>
             </div>
-            <div class="client">
-                <h4>Client:</h4>
-                <p><?= $client;?></p>
+            <div class="portInfo">
+                <div class="portTech">
+                    <h4>Technologies:</h4>
+                    <ul>
+                        <li><?= $tech1;?></li>
+                        <li><?= $tech2;?></li>
+                        <li><?= $tech3;?></li>
+                    </ul>
+                </div>
+                <div class="client">
+                    <h4>Client:</h4>
+                    <p><?= $client;?></p>
+                </div>
             </div>
         </div>
-    
+
+        <?php }; ?>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
-    <?php }; ?>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+    <script src='./public/js/script.js'></script>
 </body>
 </html>
