@@ -13,7 +13,7 @@
     <?php include('./view/header.php'); ?>
 
     <section class='ComWrapper'>
-        <h3>Laisser moi un commentaire!</h3>
+        <h3>Laissez moi un commentaire!</h3>
         <div>
             <form action="./?redirect=postCom" method="post" id="reviewForm">
                 <label for="nameCome" >Votre Nom:</label><br/>
@@ -42,7 +42,7 @@
             </div>
         <?php } ?>
     </section>
-    <section>
+    <section class='nextWrapper'>
         <?php if($from != 0){ ?>
             <a  href="./?redirect=goldenbook&from=<?=$from-$size < 0 ? 0 : $from-$size;?>&size=<?=$size;?>" class="nextBtn">PRECEDENT</a>
         <?php } ?>

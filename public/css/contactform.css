@@ -1,4 +1,10 @@
 .mailingStyle{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.mailingStyle form{
     width: 35%;
     height: auto;
     margin: 0 auto;
@@ -14,4 +20,13 @@
     border-radius: 5px;
     width: 200px;
     height: 30px;
+}
+
+.mapWrapper{
+    margin: 5% auto;
+}
+
+#map{
+    height: 400px;
+    width: 600px;
 }

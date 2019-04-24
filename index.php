@@ -22,7 +22,7 @@
             if(isset($_SESSION['connexion']) AND $_SESSION['connexion'] == 'true'){
             require('view/dashboard.php');                
             }else{
-                echo "<h1>DON'T YOU EVEN TRY BITCH! </h1>";
+                echo "<h1>This area is only for the real admin! </h1>";
                 require('./controller/landingpageCtrl.php');
             }
         }else if($_GET['redirect'] == 'login'){
@@ -53,6 +53,8 @@
             $headers = "From:" . $from;
             $headers2 = "From:" . $to;
             require('controller/contactCtrl.php');
+        }else if($_GET['redirect'] == 'repos'){
+            require('controller/myGitCtrl.php');
         }
     }else if(isset($_GET['redirectCreate']) AND htmlspecialchars($_GET['redirectCreate'])){
         if($_GET['redirectCreate'] == 'createProject'){
@@ -69,14 +71,14 @@
     }else if(isset($_GET['redirectUpdate']) AND htmlspecialchars($_GET['redirectUpdate'])){
         if($_GET['redirectUpdate'] == 'updateProject'){
             $action = 'update';
-            $projectTitle = $_POST['projectTitle'];
-            $partnerName = $_POST['partnerName'];
-            $framework = $_POST['framework'];
-            $img_link = $_POST['img_link'];
-            $tech1 = $_POST['tech1'];
-            $tech2 = $_POST['tech2'];
-            $tech3 = $_POST['tech3'];
-            $id = $_POST['id'];
+            $projectTitle = htmlspecialchars($_POST['projectTitle']);
+            $partnerName = htmlspecialchars($_POST['partnerName']);
+            $framework = htmlspecialchars($_POST['framework']);
+            $img_link = htmlspecialchars($_POST['img_link']);
+            $tech1 = htmlspecialchars($_POST['tech1']);
+            $tech2 = htmlspecialchars($_POST['tech2']);
+            $tech3 = htmlspecialchars($_POST['tech3']);
+            $id = htmlspecialchars($_POST['id']);
             require('controller/projectCtrl.php');
         }
     }else if(isset($_GET['redirectDelete']) AND htmlspecialchars($_GET['redirectDelete'])){

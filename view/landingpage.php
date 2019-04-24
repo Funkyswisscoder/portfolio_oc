@@ -13,8 +13,8 @@
 <?php include('./view/header.php'); ?>
     <section class='introduction'>
         <div class='networks'>
-            <img src="./public/images/github-logo.png" alt="lien vers mon github">
-            <img src="./public/images/linkedin-logo.png" alt="lien vers mon linkedin">
+            <a href="?redirect=repos"><img src="./public/images/github-logo.png" alt="lien vers mon github"></a>
+            <a href="https://www.linkedin.com/in/amir-bonvin-374204141/" target="_blank"><img src="./public/images/linkedin-logo.png" alt="lien vers mon linkedin"></a>
         </div>
         <div class='main-wrapper'>
             <div class='photography'><img src="./public/images/moi_bw.jpg" alt="me,myself and I"></div>

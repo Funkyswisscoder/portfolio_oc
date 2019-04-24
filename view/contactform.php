@@ -23,8 +23,17 @@
             Message:<br>
             <textarea rows="10" name="message" cols="45" required></textarea><br>
             <input type="submit" name="submit" value="Submit" class='submitBtn contactInp'>
-        </form>        
+        </form>
+        <div class="mapWrapper">
+           <div id="map"></div>
+           <h4>Adresse: Rue Rotschild 50, 1202 Genève, Suisse</h4>
+           <h4>E-mail: amir@evolutio-dev.ch</h4>
+        </div>     
+         
     </section>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz9r8WZ94IhiMqljzxutwv4LzrVhGHObM&callback=initMap"></script> 
+    <script src='./public/js/maps.js'></script>    
     <script src='./public/js/script.js'></script>
 </body>
 </html>
