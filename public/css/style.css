@@ -22,7 +22,7 @@ header{
     width: 100%;
     margin-top: 10px;
 }
-header h4{
+header h3{
     margin-left: 5%;
 }
 
@@ -44,6 +44,7 @@ a{
     text-decoration: none;
     color: #808080;
 }
+
 
 h5{
     margin: 0;
@@ -78,4 +79,9 @@ h6{
     position: absolute;
     right: 0px;
     z-index: 10;
+}
+
+#bottomBorder{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #808080;
 }

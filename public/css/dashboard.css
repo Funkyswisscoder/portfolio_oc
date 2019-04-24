@@ -37,7 +37,7 @@ input::placeholder{
 .sticky-left{
     border: 1px solid #fff;
     width: 10%;
-    height: 90vh;
+    height: 80vh;
     position: fixed;
     box-sizing: border-box;
 }
@@ -48,8 +48,7 @@ input::placeholder{
 .main{
     position: relative;
     left:10%;
-    height: 1000px;
-    width: 90%;
-    border:1px solid yellow;
-    box-sizing: border-box;
+    height: 80vh;
+    border: 1px solid #808080;
+    width: 88vw;
 }

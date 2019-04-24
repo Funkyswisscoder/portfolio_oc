@@ -7,15 +7,19 @@
 
     if(isset($_GET['redirect']) AND htmlspecialchars($_GET['redirect'])){
         if($_GET['redirect'] == 'home'){
+            $thisPage = 'home';
             require('./controller/landingpageCtrl.php');
         }
         else if($_GET['redirect'] == 'portfolio'){
+            $thisPage = 'portfolio';
             require('controller/portfolioCtrl.php');
         }
         else if($_GET['redirect'] == 'goldenbook'){
+            $thisPage = 'goldenbook';
             require('controller/goldenbookCtrl.php');
         }
         else if($_GET['redirect'] == 'contact'){
+            $thisPage = 'contact';
             require('view/contactform.php');
         }
         else if($_GET['redirect'] == 'dashboard'){
@@ -29,6 +33,7 @@
             require('controller/authMe.php');
         }else if($_GET['redirect'] == 'logout'){
             session_destroy();
+            $thisPage = 'home';
             header('location:./index.php');
         }else if($_GET['redirect'] == 'postCom'){
             $action = 'create';
@@ -88,5 +93,6 @@
             require('controller/projectCtrl.php');
         }
     }else{
+        $thisPage = 'home';
         require('./view/landingpage.php');
     }

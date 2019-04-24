@@ -2,6 +2,10 @@
     box-sizing:border-box;
 }
 
+h4{
+    font-size: 25px;
+}
+
 .pageWrapper{
     width: 99vw;
     height: 80vh;
@@ -13,6 +17,7 @@
 /* Hide the images by default */
 .mySlides {
     display: none;
+    margin-top: -14%;
 }
 
 /* Next & previous buttons */
@@ -103,19 +108,10 @@
     margin-left: 15%;
 }
 
-.client h4{
-    font-size: 25px;
-    margin-top: 20%;
-}
 
 .portTech{
     width: 350px;
     margin-left: 15%;
-}
-
-.portTech h4{
-    font-size: 25px;
-    margin-top: 20%;
 }
 
 
