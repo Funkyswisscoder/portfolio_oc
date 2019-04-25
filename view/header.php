@@ -1,7 +1,8 @@
 <header>
     <h3>Amir Bonvin</h3>
     <img src="./public/images/logoSIT.png" alt="logo de la société Swiss-ITech" id='logoSIT'>
-    <nav>
+    <a href="#menu" id="toggle"><span></span></a>
+    <nav id='menu'>
         <ul>
             <li><a href="./index.php?redirect=home" <?php if(isset($thisPage) AND $thisPage == 'home'){echo "id='bottomBorder'";} ?>>Accueil</a></li>
             <li><a href="./index.php?redirect=portfolio" <?php if(isset($thisPage) AND $thisPage == 'portfolio'){echo "id='bottomBorder'";} ?>>Portfolio</a></li>
@@ -28,3 +29,4 @@
         </form>
     </div>
 </section>
+<script src='./public/js/header.js'></script>

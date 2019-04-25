@@ -33,3 +33,31 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+
+@media screen and (min-width:701px) and (max-width: 1100px){
+    .ComWrapper{
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .ComWrapper{
+        padding-top: 35%;
+        width: 90%;
+    }
+    .ComWrapper textarea{
+        width: 100%;
+        margin-top: 2%;
+    }
+    #reviewForm input{
+        margin-bottom: 15px;
+    }
+    .nextBtn{
+        margin: 5px;
+    }
+    .reviewPost{
+        width: 90%;
+    }
+}
+

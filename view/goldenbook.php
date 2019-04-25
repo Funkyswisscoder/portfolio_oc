@@ -20,7 +20,7 @@
                 <input type="text" name="nameCom" id="nameCom" required><br/>
                 <label for="comContent">Votre Commentaire:</label><br/>
                 <textarea name="comContent" id="comContent" cols="60" rows="15" required></textarea><br/>
-                <input type="submit" value="Valider">
+                <input type="submit" value="Valider" class='submitBtn'>
             </form>
         </div>
     </section>

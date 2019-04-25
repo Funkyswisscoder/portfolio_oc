@@ -27,7 +27,7 @@
 
         public function getCommsPaginated($from,$size){
             $db = $this->dbConnect();
-            $req = $db->prepare('SELECT * FROM GoldenBook LIMIT :from, :size');
+            $req = $db->prepare('SELECT * FROM GoldenBook ORDER BY id DESC LIMIT :from, :size');
             $req->bindParam(':from', $from, PDO::PARAM_INT);
             $req->bindParam(':size', $size, PDO::PARAM_INT);
 

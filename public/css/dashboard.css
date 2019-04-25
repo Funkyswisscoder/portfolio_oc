@@ -52,3 +52,9 @@ input::placeholder{
     border: 1px solid #808080;
     width: 88vw;
 }
+
+@media screen and (min-width:701px) and (max-width: 1100px){
+    h2{
+        padding-top: 15%;
+    }
+}
