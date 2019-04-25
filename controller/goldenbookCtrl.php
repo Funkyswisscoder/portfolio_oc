@@ -1,6 +1,5 @@
 <?php
 
-    ini_set('display_errors', 1);
     require('./model/CommModel.php');
 
         $cm = new CommentsManager();

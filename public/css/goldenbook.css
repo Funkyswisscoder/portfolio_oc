@@ -4,6 +4,9 @@
     margin: 0 auto;
     text-align: center;
 }
+#reviewForm input{
+    margin-bottom: 2%;
+}
     
 .reviewPost{
     width: 50%;

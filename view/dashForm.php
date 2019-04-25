@@ -1,13 +1,12 @@
 <?php 
 
-ini_set('display_errors', 1);
 
     if(isset($_REQUEST['edit'])){
         $pm = new ProjectManager();
         $project = $pm->getOneProject($_REQUEST['edit'])->fetchAll()[0];
     }
     if(!isset($FORM_ACTION)){
-        echo '<b style="color:red">SETTING $FORM_ACTION IS REQUIRED FOR THE DASHFORM TO WORK YO!</b>';
+        echo '<b style="color:red">SETTING $FORM_ACTION IS REQUIRED FOR THE DASHFORM TO WORK!</b>';
         return;
     }
     

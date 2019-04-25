@@ -1,5 +1,4 @@
 <?php
-    ini_set('display_errors', 1);
 
 
     session_start();
@@ -64,13 +63,13 @@
     }else if(isset($_GET['redirectCreate']) AND htmlspecialchars($_GET['redirectCreate'])){
         if($_GET['redirectCreate'] == 'createProject'){
             $action = 'create';
-            $projectTitle = $_POST['projectTitle'];
-            $partnerName = $_POST['partnerName'];
-            $framework = $_POST['framework'];
-            $img_link = $_POST['img_link'];
-            $tech1 = $_POST['tech1'];
-            $tech2 = $_POST['tech2'];
-            $tech3 = $_POST['tech3'];
+            $projectTitle = htmlspecialchars($_POST['projectTitle']);
+            $partnerName = htmlspecialchars($_POST['partnerName']);
+            $framework = htmlspecialchars($_POST['framework']);
+            $img_link = htmlspecialchars($_POST['img_link']);
+            $tech1 = htmlspecialchars($_POST['tech1']);
+            $tech2 = htmlspecialchars($_POST['tech2']);
+            $tech3 = htmlspecialchars($_POST['tech3']);
             require('controller/projectCtrl.php');
         }
     }else if(isset($_GET['redirectUpdate']) AND htmlspecialchars($_GET['redirectUpdate'])){
@@ -88,7 +87,7 @@
         }
     }else if(isset($_GET['redirectDelete']) AND htmlspecialchars($_GET['redirectDelete'])){
         if($_GET['redirectDelete'] == 'deleteProject'){
-            $id=$_POST['delete'];
+            $id = htmlspecialchars($_POST['delete']);
             $action = 'delete';
             require('controller/projectCtrl.php');
         }

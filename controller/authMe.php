@@ -1,5 +1,4 @@
 <?php
-    ini_set('display_errors', 1);
     require('./model/userMdl.php');
 
 /*
@@ -18,7 +17,6 @@
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $userPwd = htmlspecialchars($_POST['password']);
     if($pseudo != 'Amir'){
-        //display error page
         echo "<h1> Wrong Username or Password</h1>";
         return;
     }
